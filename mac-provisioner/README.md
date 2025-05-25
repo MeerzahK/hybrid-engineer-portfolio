@@ -1,6 +1,6 @@
 # 🛠️ mac-provisioner
 
-[![CI](https://github.com/MeerzahK/mac-provisioner/actions/workflows/main.yml/badge.svg)](https://github.com/Meerzahk/cpe-projects/mac-provisioner/actions)
+[![CI](https://github.com/MeerzahK?tab=repositories/actions/workflows/main.yml/badge.svg)](https://github.com/Meerzahk/cpe-projects/mac-provisioner/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![macOS](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://apple.com/macos)
 
