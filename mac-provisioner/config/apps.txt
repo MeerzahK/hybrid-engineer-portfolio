@@ -1,0 +1,4 @@
+google-chrome
+slack
+zoom
+visual-studio-code
