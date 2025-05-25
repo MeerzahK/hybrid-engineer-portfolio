@@ -13,12 +13,12 @@ echo "🧼 Starting disk cleanup..." | tee "$LOG_FILE"
 FREE_BEFORE=$(df -h / | awk 'NR==2 {print $4}')
 echo "Free space before: $FREE_BEFORE" | tee -a "$LOG_FILE"
 
-# Clean system caches (requires sudo)
-sudo rm -rf /Library/Caches/*
-sudo rm -rf ~/Library/Caches/*
+# Clean system and user caches (skip protected files silently)
+sudo rm -rf /Library/Caches/* 2>/dev/null
+sudo rm -rf ~/Library/Caches/* 2>/dev/null
 
-# Clear trash
-rm -rf ~/.Trash/*
+# Empty Trash
+rm -rf ~/.Trash/* 2>/dev/null
 
 # Clear system logs (non-essential)
 sudo rm -rf /private/var/log/asl/*.asl 2>/dev/null
