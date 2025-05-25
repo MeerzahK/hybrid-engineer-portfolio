@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadDescription</key>
+    <string>Blocks external USB storage devices and media devices, while allowing USB-C peripherals and charging.</string>
+    <key>PayloadDisplayName</key>
+    <string>Block USB Storage + Media (Allow USB-C Peripherals and Charging)</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.blockusbmedia.configuration</string>
+    <key>PayloadOrganization</key>
+    <string>Example Company</string>
+    <key>PayloadRemovalDisallowed</key>
+    <true/>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>ee77d5cc-b4ef-42b3-bf63-dce9dcb98765</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.applicationaccess</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.example.blockusbmedia.applicationaccess</string>
+            <key>PayloadUUID</key>
+            <string>99999999-8888-7777-6666-555555555555</string>
+            <key>PayloadEnabled</key>
+            <true/>
+            
+            <!-- Allow restricted USB mode but block mass storage devices -->
+            <key>allowUSBRestrictedMode</key>
+            <true/>
+            
+            <!-- Block external storage drives -->
+            <key>allowExternalDrive</key>
+            <false/>
+            
+            <!-- Block disk image mounting (optional) -->
+            <key>allowDiskImageMounting</key>
+            <false/>
+            
+            <!-- Block media syncing (optional) -->
+            <key>allowMediaContentSync</key>
+            <false/>
+            
+            <!-- Block external booting -->
+            <key>allowUnpairedExternalBoot</key>
+            <false/>
+            
+            <!-- Allow charging via USB-C -->
+            <key>allowCharging</key>
+            <true/>
+            
+            <!-- Allow USB peripherals (e.g., keyboards, mice) and USB-C dongles -->
+            <key>allowUSBPeripherals</key>
+            <true/>
+            
+        </dict>
+    </array>
+</dict>
+</plist>

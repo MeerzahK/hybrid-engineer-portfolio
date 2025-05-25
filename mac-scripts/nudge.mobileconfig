@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>PayloadContent</key>
+        <array>
+            <dict>
+                <key>PayloadDescription</key>
+                <string>Configures all Nudge preferences</string>
+                <key>PayloadDisplayName</key>
+                <string>Nudge Preferences</string>
+                <key>PayloadIdentifier</key>
+                <string>com.github.macadmins.Nudge.preferences.example</string>
+                <key>PayloadOrganization</key>
+                <string></string>
+                <key>PayloadType</key>
+                <string>com.github.macadmins.Nudge</string>
+                <key>PayloadUUID</key>
+                <string>CA02957C-7472-446B-9F77-3E0414405556</string>
+                <key>PayloadVersion</key>
+                <integer>1</integer>
+                
+                <key>optionalFeatures</key>
+                <dict>
+                    <key>acceptableScreenSharingUsage</key>
+                    <true/>
+                    <key>aggressiveUserExperience</key>
+                    <true/>
+                    <key>aggressiveUserFullScreenExperience</key>
+                    <true/>
+                    <key>asynchronousSoftwareUpdate</key>
+                    <true/>
+                    <key>attemptToBlockApplicationLaunches</key>
+                    <false/>
+                    <key>attemptToFetchMajorUpgrade</key>
+                    <true/>
+                    <key>terminateApplicationsOnLaunch</key>
+                    <false/>
+                    <key>honorCycleTimersOnExit</key>
+                    <true/>
+                </dict>
+                
+                <key>osVersionRequirements</key>
+            <array>
+            <dict>
+                <key>aboutUpdateURL</key>
+                <string>https://applovin.atlassian.net/servicedesk/customer/portal/4/group/48/create/121</string>
+                <key>actionButtonPath</key>
+                <string>kandji://open-app/self-service</string>
+                <key>requiredInstallationDate</key>
+                <string>2025-03-14T00:00:00</string>
+                <key>requiredMinimumOSVersion</key>
+                <string>15.0</string>
+            </dict>
+            </array>
+
+                
+                <key>userExperience</key>
+                <dict>                    
+                    <key>allowUserQuitDeferrals</key>
+                    <true/>
+                    <key>allowedDeferrals</key>
+                    <integer>5</integer>
+                    <key>approachingRefreshCycle</key>
+                    <integer>14400</integer> <!-- 4 hours -->
+                    <key>approachingWindowTime</key>
+                    <integer>72000</integer> <!-- Higher than 72, custom deferral options does not show -->
+                    <key>elapsedRefreshCycle</key>
+                    <integer>14400</integer> <!-- 4 Hours -->
+                    <key>imminentRefreshCycle</key>
+                    <integer>14400</integer> <!-- 4 hours -->
+                    <key>imminentWindowTime</key>
+                    <integer>24</integer>
+                    <key>initialRefreshCycle</key> <!-- Refreshs 24 hours -->
+                    <integer>14400</integer> <!-- 4 hours -->
+                    <key>maxRandomDelayInSeconds</key>
+                    <integer>1200</integer> <!-- Random delay of 20 minutes -->
+                    <key>nudgeRefreshCycle</key>
+                    <integer>60</integer> <!-- Refresh UI every 1 minute -->
+                    <key>reminderTimerInterval</key>
+                    <integer>14400</integer> <!-- Remind every 4 hours -->
+                    <key>randomDelay</key>
+                    <false/>
+                    <key>allowGracePeriods</key>
+                    <false/>
+                    </dict>
+
+                <key>userInterface</key>
+                <dict>
+                    <key>fallbackLanguage</key>
+                    <string>en</string>
+                    <key>iconDarkPath</key>
+                    <string>data:image/jpeg;base64,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</string>
+                    <key>iconLightPath</key>
+                    <string>data:image/jpeg;base64,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</string>
+                    <key>showDeferralCount</key>
+                    <true/>
+                    <key>showRequiredDate</key>
+                    <true/>
+                    <key>requiredInstallationDisplayFormat</key>
+                    <string>MMM d, yyyy</string>
+                    <key>simpleMode</key>
+                    <false/>
+                    <key>singleQuitButton</key>
+                    <true/>
+                    <key>showActivelyExploitedCVEs</key>
+                    <false/>
+                    
+                    <key>updateElements</key>
+                    <array>
+                        <dict>
+                            <key>_language</key>
+                            <string>en</string>
+                            <key>actionButtonText</key>
+                            <string>Update Device</string>
+                            <key>informationButtonText</key>
+                            <string>Click to create IT Ticket</string>
+                            <key>primaryQuitButtonText</key>
+                            <string>Later</string>
+                            <key>oneDayDeferralButtonText</key>
+                            <string>One Day</string>
+                            <key>mainContentHeader</key>
+                            <string>Your device will restart during this update</string>
+                            <key>mainContentNote</key>
+                            <string>Important Notes</string>
+                            <key>mainContentSubHeader</key>
+                            <string>Updates can take around 30 minutes to complete</string>
+                            <key>mainContentText</key>
+                            <string> Hello there 👋 \n\n We’ve detected that your Mac 💻 has pending software updates. Keeping macOS up to date is critical 🔒 for protecting your device and data. \n\n ⚡ Please update your Mac at your earliest convenience. ⚡ \n\nIf the update is not completed by the deadline ⏳, your computer may automatically install it at a time that could be inconvenient ⏰ for you. \n\nIf you have any questions ❓ or need assistance 🤝, our IT team is here to help!</string>  
+                            <key>mainHeader</key>
+                            <string>📣⚡ A Friendly Reminder from AppLovin IT Team!! 🚀✨</string>
+                            <key>subHeader</key>
+                            <string>🚨Security Update: Please update by deadline: **March 14, 2025**🚨</string>
+                            </dict>
+                    </array>
+                </dict>
+            </dict>
+        </array>
+        <key>PayloadDescription</key>
+        <string>Configures Nudge application</string>
+        <key>PayloadDisplayName</key>
+        <string>Nudge</string>
+        <key>PayloadIdentifier</key>
+        <string>com.github.macadmins.Nudge.example</string>
+        <key>PayloadOrganization</key>
+        <string>Nudge</string>
+        <key>PayloadScope</key>
+        <string>System</string>
+        <key>PayloadType</key>
+        <string>Configuration</string>
+        <key>PayloadUUID</key>
+        <string>2F54F734-132D-4539-B583-F1DCF23DB5EB</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+    </dict>
+</plist>
