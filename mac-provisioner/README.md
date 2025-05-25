@@ -1,10 +1,6 @@
 # 🛠️ mac-provisioner
 
-<<<<<<< HEAD
-[![CI](https://github.com/<your-username>/mac-provisioner/actions/workflows/main.yml/badge.svg)](https://github.com/Meerzahk/cpe-projects/mac-provisioner/actions)
-=======
-[![CI](https://github.com/MeerzahK/mac-provisioner/actions/workflows/main.yml/badge.svg)](https://github.com/<your-username>/mac-provisioner/actions)
->>>>>>> eb355b6 (updated Readme)
+[![CI](https://github.com/MeerzahK/mac-provisioner/actions/workflows/main.yml/badge.svg)](https://github.com/Meerzahk/cpe-projects/mac-provisioner/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![macOS](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://apple.com/macos)
 
@@ -178,20 +174,14 @@ jobs:
 
 ---
 
-<<<<<<< HEAD
 ---
 
-=======
->>>>>>> eb355b6 (updated Readme)
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-<<<<<<< HEAD
 
 ## 🙋‍♂️ Maintainer
 
 Built with ❤️ by [@MeerzahK](https://github.com/MeerzahK)
-=======
->>>>>>> eb355b6 (updated Readme)
