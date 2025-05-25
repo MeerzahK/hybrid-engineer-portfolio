@@ -7,6 +7,8 @@ This is a Python CLI tool to automate new Mac setup:
 ## Run
 ```bash
 python3 provision.py --install-apps --check-health
+''' 
+
 ---
 
 ## 🚀 Phase 2: MDM, Config Management & Packaging (Weeks 9–20)
