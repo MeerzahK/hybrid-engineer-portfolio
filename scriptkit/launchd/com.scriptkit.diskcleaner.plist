@@ -9,7 +9,7 @@
     <key>ProgramArguments</key>
     <array>
       <string>/bin/bash</string>
-      <string>/Users/YOUR_USERNAME/scriptkit/scripts/run_clean_disk.sh</string>
+      <string>/usr/local/bin/scriptkit/run_clean_disk.sh</string>
     </array>
 
     <key>StartCalendarInterval</key>
