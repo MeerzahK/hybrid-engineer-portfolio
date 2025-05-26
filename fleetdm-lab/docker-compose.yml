@@ -1,4 +1,33 @@
-  fleet:
+services:
+  mysql:
+    image: mysql:8.0
+    platform: linux/arm64/v8
+    container_name: fleet_mysql
+    restart: always
+    env_file:
+      - fleet.env
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: redis:alpine
+    platform: linux/arm64/v8
+    container_name: fleet_redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+  prepare-db:
+    image: fleetdm/fleet:v4.40.0
+    platform: linux/amd64
+    depends_on:
+      - mysql
+    entrypoint: >
+      sh -c "fleet prepare db --no-prompt --mysql_address=mysql:3306 --mysql_username=fleet --mysql_password=fleetpass --mysql_database=fleet"
+
+    fleet:
     image: fleetdm/fleet:v4.40.0
     platform: linux/amd64
     container_name: fleet_server
