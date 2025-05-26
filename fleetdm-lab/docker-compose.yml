@@ -13,7 +13,7 @@ services:
 
   fleet:
     image: fleetdm/fleet:latest
-    platform: linux/arm64/v8
+    platform: linux/amd64
     container_name: fleet_server
     restart: always
     depends_on:
