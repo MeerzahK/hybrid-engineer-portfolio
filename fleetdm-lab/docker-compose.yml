@@ -21,9 +21,9 @@
     command: fleet prepare db --no-prompt --mysql_address=mysql:3306 --mysql_username=$MYSQL_USER --mysql_password=$MYSQL_PASSWORD --mysql_database=$MYSQL_DATABASE && fleet serve
     environment:
       FLEET_MYSQL_ADDRESS: mysql:3306
-      FLEET_MYSQL_USERNAME: $MYSQL_USER
-      FLEET_MYSQL_PASSWORD: $MYSQL_PASSWORD
-      FLEET_MYSQL_DATABASE: $MYSQL_DATABASE
+      FLEET_MYSQL_USERNAME: fleet
+      FLEET_MYSQL_PASSWORD: fleetpass
+      FLEET_MYSQL_DATABASE: fleet
       FLEET_SERVER_ADDRESS: 0.0.0.0:8080
 
 volumes:
