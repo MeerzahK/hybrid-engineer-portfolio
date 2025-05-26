@@ -11,13 +11,28 @@ services:
     ports:
       - "3306:3306"
 
+<<<<<<< HEAD
   fleet:
     image: fleetdm/fleet:latest
     platform: linux/amd64
+=======
+  redis:
+    image: redis:alpine
+    platform: linux/arm64/v8
+    container_name: fleet_redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+  fleet:
+    image: fleetdm/fleet:v4.40.0
+    platform: linux/amd64  # Required because Fleet doesn’t publish ARM builds
+>>>>>>> 6f1249c (added Redis to docker compose)
     container_name: fleet_server
     restart: always
     depends_on:
       - mysql
+      - redis
     ports:
       - "8080:8080"
     command: >
@@ -28,6 +43,7 @@ services:
       FLEET_MYSQL_USERNAME: fleet
       FLEET_MYSQL_PASSWORD: fleetpass
       FLEET_MYSQL_DATABASE: fleet
+      FLEET_REDIS_ADDRESS: redis:6379
       FLEET_SERVER_ADDRESS: 0.0.0.0:8080
 
 volumes:
