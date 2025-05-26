@@ -19,19 +19,26 @@ services:
     ports:
       - "6379:6379"
 
+  prepare-db:
+    image: fleetdm/fleet:v4.40.0
+    platform: linux/amd64
+    depends_on:
+      - mysql
+    entrypoint: >
+      sh -c "fleet prepare db --no-prompt --mysql_address=mysql:3306 --mysql_username=fleet --mysql_password=fleetpass --mysql_database=fleet"
+
   fleet:
     image: fleetdm/fleet:v4.40.0
     platform: linux/amd64
     container_name: fleet_server
     restart: always
     depends_on:
+      - prepare-db
       - mysql
       - redis
     ports:
       - "8080:8080"
-    command: >
-      sh -c "fleet prepare db --no-prompt --mysql_address=mysql:3306 --mysql_username=fleet --mysql_password=fleetpass --mysql_database=fleet &&
-      fleet serve"
+    command: fleet serve
     environment:
       FLEET_MYSQL_ADDRESS: mysql:3306
       FLEET_MYSQL_USERNAME: fleet
