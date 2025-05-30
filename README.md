@@ -76,13 +76,4 @@ Goal: Full lifecycle visibility from provisioning to compliance enforcement.
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Meerzah&show_icons=true&theme=tokyonight" alt="GitHub Stats" height="160">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Meerzah&layout=compact&theme=tokyonight" alt="Top Languages" height="160">
-</p>
-
----
-
 _This portfolio is a work-in-progress and grows with every commit._
