@@ -1,0 +1,6 @@
+FROM fleetdm/fleet:v5.5.0 # Use latest compatible version or your specific one
+
+COPY fleet-entrypoint.sh /usr/local/bin/fleet-entrypoint.sh
+RUN chmod +x /usr/local/bin/fleet-entrypoint.sh
+
+ENTRYPOINT ["fleet-entrypoint.sh"]

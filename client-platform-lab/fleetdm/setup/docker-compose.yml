@@ -1,0 +1,46 @@
+services:
+  mysql:
+    image: mysql:8.0
+    platform: linux/amd64
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "${MYSQL_HOST_PORT}:3306" # Host port is from .env, container port is 3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  redis:
+    image: redis:7
+    platform: linux/amd64
+    restart: unless-stopped
+    ports:
+      - "${REDIS_HOST_PORT}:6379" # Host port is from .env, container port is 6379
+
+  fleet:
+    image: fleetdm/fleet:v4.67.3
+    platform: linux/amd64
+    depends_on:
+      - mysql
+      - redis
+    ports:
+      - "${FLEET_HOST_PORT}:8080" # Host port is from .env, container port is 8080
+    restart: unless-stopped
+    environment:
+      FLEET_MYSQL_USERNAME: ${MYSQL_USER} # Use the same variable defined for MySQL
+      FLEET_MYSQL_PASSWORD: ${MYSQL_PASSWORD} # Use the same variable defined for MySQL
+      FLEET_MYSQL_DATABASE: ${MYSQL_DATABASE} # Use the same variable defined for MySQL
+      FLEET_MYSQL_ADDRESS: mysql:3306 # Internal service name and port
+      FLEET_REDIS_ADDRESS: redis:6379  # Internal service name and port
+      FLEET_SERVER_PORT: 8080 # Internal port Fleet listens on; matches the exposed port
+      FLEET_SERVER_TLS: "false"
+      FLEET_VULNERABILITIES_DISABLE_DATA_SYNC: "true"
+      FLEET_UPGRADES_ALLOW_MISSING_MIGRATIONS: "true"
+    command: >
+      sh -c "fleet prepare db && fleet serve"
+
+volumes:
+  mysql_data:
