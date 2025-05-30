@@ -1,3 +1,4 @@
+```
 fleetdm/
 ├── docker/
 │   ├── docker-compose.yml        # FleetDM + dependencies
@@ -11,5 +12,6 @@ fleetdm/
 ├── configs/
 │   ├── fleet.yml                 # Sample Fleet config file
 │   └── enrollment_secret.txt    # Placeholder enrollment secret
-├── notes.md                     # Your learning notes and observations
-└── README.md                    # FleetDM learning roadmap overview
+├── notes.md                      # Your learning notes and observations
+└── README.md                     # FleetDM learning roadmap overview
+```
